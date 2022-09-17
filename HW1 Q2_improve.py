@@ -164,7 +164,7 @@ logreg = LogisticRegression()
 logreg.fit(X_over, Y_over)
 Y_pred = logreg.predict(X_test)
 acc_log = round(logreg.score(X_over, Y_over) * 100, 2)
-acc_log #80.36
+acc_log 
 
 coeff_1 = pd.DataFrame(train_1.columns.delete(0))
 coeff_1.columns = ['Feature']
@@ -178,14 +178,14 @@ svc = SVC()
 svc.fit(X_over, Y_over)
 Y_pred = svc.predict(X_test)
 acc_svc = round(svc.score(X_over, Y_over) * 100, 2)
-acc_svc #78.23
+acc_svc 
 
 #knn
 knn = KNeighborsClassifier(n_neighbors = 3)
 knn.fit(X_over, Y_over)
 Y_pred = knn.predict(X_test)
 acc_knn = round(knn.score(X_over, Y_over) * 100, 2)
-acc_knn #84.74
+acc_knn 
 
 # Gaussian Naive Bayes
 
@@ -193,7 +193,7 @@ gaussian = GaussianNB()
 gaussian.fit(X_over, Y_over)
 Y_pred = gaussian.predict(X_test)
 acc_gaussian = round(gaussian.score(X_over, Y_over) * 100, 2)
-acc_gaussian #72.28
+acc_gaussian 
 
 # Perceptron
 
@@ -201,7 +201,7 @@ perceptron = Perceptron()
 perceptron.fit(X_over, Y_over)
 Y_pred = perceptron.predict(X_test)
 acc_perceptron = round(perceptron.score(X_over, Y_over) * 100, 2)
-acc_perceptron #78.34
+acc_perceptron 
 
 # Linear SVC
 
@@ -209,7 +209,7 @@ linear_svc = LinearSVC()
 linear_svc.fit(X_over, Y_over)
 Y_pred = linear_svc.predict(X_test)
 acc_linear_svc = round(linear_svc.score(X_over, Y_over) * 100, 2)
-acc_linear_svc #79.12
+acc_linear_svc 
 
 # Stochastic Gradient Descent
 
@@ -217,7 +217,7 @@ sgd = SGDClassifier()
 sgd.fit(X_over, Y_over)
 Y_pred = sgd.predict(X_test)
 acc_sgd = round(sgd.score(X_over, Y_over) * 100, 2)
-acc_sgd #78.79
+acc_sgd 
 
 # Decision Tree
 
@@ -225,7 +225,7 @@ decision_tree = DecisionTreeClassifier()
 decision_tree.fit(X_over, Y_over)
 Y_pred = decision_tree.predict(X_test)
 acc_decision_tree = round(decision_tree.score(X_over, Y_over) * 100, 2)
-acc_decision_tree #86.76
+acc_decision_tree 
 
 # Random Forest
 
@@ -234,7 +234,7 @@ random_forest.fit(X_over, Y_over)
 Y_pred = random_forest.predict(X_test)
 random_forest.score(X_over, Y_over)
 acc_random_forest = round(random_forest.score(X_over, Y_over) * 100, 2)
-acc_random_forest #86.76
+acc_random_forest 
 
 ####Model evaluation
 models = pd.DataFrame({
